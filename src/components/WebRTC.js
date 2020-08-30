@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useLayoutEffect} from 'react';
 import {StyleSheet, View, Dimensions} from 'react-native';
 import {
   RTCView,
@@ -20,6 +20,10 @@ const WebRTC = ({route, navigation}) => {
   const room = route.params.room;
   const [localStream, setLocalStream] = useState(null);
   const [remoteStream, setRemoteStream] = useState(null);
+
+  useLayoutEffect(() => {
+    navigation.setOptions({headerTitle: `Room ${room}`});
+  });
 
   useEffect(() => {
     const ws = new WebSocketClient(`ws://${host}`);

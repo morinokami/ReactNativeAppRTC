@@ -17,7 +17,7 @@ const Home = ({navigation}) => {
       <View style={styles.buttons}>
         <Button
           title="Join"
-          onPress={() => navigation.navigate('WebRTC', {room})}
+          onPress={() => navigation.navigate('Room', {room})}
         />
       </View>
     </View>

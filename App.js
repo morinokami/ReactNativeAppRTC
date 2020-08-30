@@ -12,7 +12,7 @@ const App = () => {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="WebRTC" component={WebRTC} />
+        <Stack.Screen name="Room" component={WebRTC} />
       </Stack.Navigator>
     </NavigationContainer>
   );
